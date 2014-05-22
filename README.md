@@ -10,6 +10,8 @@ Source of the original data: https://d396qusza40orc.cloudfront.net/getdata%2Fpro
 
 • In R or Rstudio set the working directory to the UCI HAR Dataset directory containing the program and the downloaded file
 
+• Ensure the 'reshape2' package has been installed.  Program relies on melt and cast functions
+
 • Run the run_analysis.R program - source("run_analysis.R")
 
 • The script will produce a tab delimited txt output file in the working directory named step5_averages.txt
