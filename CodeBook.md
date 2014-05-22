@@ -6,14 +6,15 @@ Additional information about where the data was obtained:  http://archive.ics.uc
 
 Program Assumptions
 
-• This program assumes the necessary files have been downloaded to local working directory and uncompressed 
-• Program assumes that the 'reshape2' package has been installed
+          * This program assumes the necessary files have been downloaded to local working directory and uncompressed 
+          * Program assumes that the 'reshape2' package has been installed
 
 
 
 • 1.  Reads the ./features.txt file of all measurements.  Features contains the 561 features or measurements that will be used to apply names to the the training and test X data sets. 
 
 • 2.  Read the ./activity_labels.txt file of activity ids and activity descriptions.  Activity names will be used to populate the cleaned dataset with descriptive names
+
           Activity_ID          Activity_Name
           1                    WALKING
           2                    WALKING_UPSTAIRS
@@ -31,34 +32,24 @@ Program Assumptions
           5
           5
 
-• 5.  Read the ./train/subject_train.tex file, the ./test/subject_test.txt 
-      file, and merge them together resulting in a merged dataset of 10299
-      rows and 1 column of subject ids.  Sample output:
+• 5.  Read the ./train/subject_train.tex file, the ./test/subject_test.txt file, and merge them together resulting in a merged dataset of 10299 rows and 1 column of subject ids.  Sample output:
 
           Subject
           1
           1
           1
 
-• 6.  Subset the features data frame and extract those features of mean 
-      and standard deviation
+• 6.  Subset the features data frame and extract those features of mean and standard deviation
 
-• 7.  Use the subset of features (step 6) to select only those features 
-      from the      merged dataset of measures (step 3) creating a data 
-      frame of 10299 rows and 66 columns
+• 7.  Use the subset of features (step 6) to select only those features from the merged dataset of measures (step 3) creating a data frame of 10299 rows and 66 columns
 
-• 8.  Updated the activity labels on the merged file of activities (step
-      4) to meaningful names
+• 8.  Updated the activity labels on the merged file of activities (step 4) to meaningful names
 
-• 9.  Merge the subsetted dataset of measures (step 7) with the merged set
-      of subjects and activities.  Data frame contains column Subject,
-      Activity Names and 66 columns of mean and standard deviation
-      Measures
+• 9.  Merge the subsetted dataset of measures (step 7) with the merged set of subjects and activities.  Data frame contains column Subject, Activity Names and 66 columns of mean and standard deviation Measures
 
 • 10. Melts the dataset from step 9 into individual measure observations 
 
-• 11. Recasts the data "wide" using dcast, applying the mean function to 
-      all 66 measurement variables
+• 11. Recasts the data "wide" using dcast, applying the mean function to all 66 measurement variables
 
 • 12. Writes out the data set from step 11 as a tab separated text file.
 
